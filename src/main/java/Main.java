@@ -1,36 +1,42 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Scanner in = new Scanner(System.in);
+        String input = in.next();
         if(args.length == 0) {
             return;
         }
         Calculator calc = new Calculator();
-        if (args[0].equals("add")) {
-            System.out.println(calc.add(Integer.parseInt(args[1]),
-                    Integer.parseInt(args[2])));
+        if (input.contains("add")) {
+            System.out.println(calc.add(in.nextInt(),
+                    in.nextInt()));
         }
-
-        if (args[0].equals("subtract")) {
-            System.out.println(calc.subtract(Integer.parseInt(args[1]),
-                    Integer.parseInt(args[2])));
+        input = in.next();
+        if (input.contains("subtract")) {
+            System.out.println(calc.subtract(in.nextInt(),
+                    in.nextInt()));
         }
-
-        if (args[0].equals("multiply")) {
-            System.out.println(calc.multiply(Integer.parseInt(args[1]),
-                    Integer.parseInt(args[2])));
+        input = in.next();
+        if (input.contains("multiply")) {
+            System.out.println(calc.multiply(in.nextInt(),
+                    in.nextInt()));
         }
-
-        if (args[0].equals("divide")) {
-            System.out.println(calc.divide(Integer.parseInt(args[1]),
-                    Integer.parseInt(args[2])));
+        input = in.next();
+        if (input.contains("divide")) {
+            System.out.println(calc.divide(in.nextInt(),
+                    in.nextInt()));
         }
-
-        if (args[0].equals("fibonacci")) {
-            System.out.println(calc.fibonacciNumberFinder(Integer.parseInt(args[1])));
+        input = in.next();
+        if (input.contains("fibonacci")) {
+            System.out.println(calc.fibonacciNumberFinder(in.nextInt()));
         }
-
-        if (args[0].equals("binary")) {
-            System.out.println(calc.intToBinaryNumber(Integer.parseInt(args[1])));
+        input = in.next();
+        if (input.contains("binary")) {
+            System.out.println(calc.intToBinaryNumber(in.nextInt()));
         }
     }
 }
