@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "Shadowyfour/cs_204_jenkins_calculator"
+        registry = "shadowyfour/cs_204_jenkins_calculator"
         registryCredential = 'dockerhub'
         dockerImage=''
     }
